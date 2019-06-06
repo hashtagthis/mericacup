@@ -1,0 +1,275 @@
+/* Flex Containers */
+
+.flexRow__container,
+.flexColumn__container {
+    display: flex;
+}
+
+.flexRow__container {
+    flex-flow: row wrap;
+}
+
+.flexColumn__container {
+    flex-flow: column wrap;
+}
+
+/* Table container */
+
+.table__container {
+    background: #f4f9ce;
+    border-radius: 6px;
+    padding: 30px 20px;
+    margin-bottom: 20px;
+}
+
+.table__container header {
+    margin-bottom: 25px;
+}
+
+.table__container header h2 {
+    font-size: 22px;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 0;
+}
+
+.table__container .score__content {
+    width: 33.3%;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.table__container .score__content input {
+    height: 20px;
+    width: 40px;
+    text-align: center;
+}
+
+.table__container .score__content img {
+    width: 25px;
+    height: 17px;
+}
+
+.table__container .score__content .country__label:first-child img {
+    margin-right: 5px;
+}
+
+.table__container .score__content .country__label:last-child img {
+    margin-left: 5px;
+}
+
+.center-box {
+    text-align: center;
+}
+
+.enviarResultados, .enviarResultadosFinal {
+    background: red;
+    color: white;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin: 0 auto 20px auto;
+    display: inline-block;
+}
+
+.enviarResultados:hover, .enviarResultadosFinal:hover {
+    color: white;
+}
+
+/* Primera sección */
+
+#mu-hero {
+    padding-top: 90px;
+    padding-bottom: 0;
+    background: #ce190b;
+}
+
+#mu-hero img {
+    display: block;
+    width: 100%;
+}
+
+#mu-header.mu-fixed-nav {
+    background: rgba(206, 25, 11, 0.9);
+}
+
+/* Pasos */
+
+.pasos__container img {
+    display: block;
+    margin: 0 auto;
+}
+
+/* Premios */
+
+#premios {
+    padding: 50px 0 100px 0;
+    background: url('../images/bg_prize.png');
+    display: inline;
+    float: left;
+    width: 100%;
+}
+
+#premios header {
+    text-align: center;
+}
+
+#premios img {
+    display: block;
+    margin: 0 auto;
+    width: 100%;
+}
+
+/* Formulario */
+
+.mu-send-msg-btn {
+    cursor: pointer
+}
+
+/* Preguntas */
+
+.preguntas__container {
+    background: url('../images/bg_prize.png');
+    background-size: cover;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    visibility: hidden;
+    display: none;
+    transition: ease-in-out all 0.5s;
+}
+
+.preguntas__container.active {
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items: center;
+    opacity: 1;
+    visibility: visible;
+}
+
+.preguntas__container h1 {
+    color: #ce190b;
+}
+
+.preguntas__container ul {
+    padding: 0;
+}
+
+.preguntas__container ul li {
+    list-style: none;
+    position: relative;
+    margin-bottom: 15px;
+}
+
+.preguntas__container #question p {
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.preguntas__container input[type="radio"] {
+    opacity: 0.01;
+    z-index: 100;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    cursor: pointer;
+}
+
+.preguntas__container input[type="radio"]:checked+label, .Checked+label {
+    background: #ce190b;
+    color: white;
+}
+
+.buttons__container .button_cuestionario a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.preguntas__container label {
+    padding: 5px;
+    border: 1px solid black;
+    color: black;
+    cursor: pointer;
+    line-height: initial;
+    z-index: 90;
+    font-size: 15px;
+}
+
+.buttons__container {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-end;
+    align-content: space-around;
+}
+
+.buttons__container .button_cuestionario:first-child {
+    margin-right: 10px;
+}
+
+.buttons__container .button_cuestionario {
+    max-width: 120px;
+    width: auto;
+    padding: 10px;
+    border: 2px solid #ce190b;
+    background: #ce190b;
+    cursor: pointer;
+}
+
+/* Formulario escondido */
+
+.hiddenForm {
+    opacity: 0;
+    visibility: hidden;
+    height: 0;
+}
+
+.hiddenForm h3 {
+    color: #ce190b;
+}
+
+@media (max-width: 650px) {
+    .pasos__container img {
+        width: 60%;
+        max-width: 280px;
+    }
+
+    #premios img {
+        width: 80%;
+    }
+
+    .table__container .score__content {
+        width: 100%;
+    }
+}
+
+#gracias header {
+    display: block;
+    background: #ce190b;
+}
+
+.gracias__container {
+    height: 80vh;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    padding: 120px 0 0;
+}
+
+.gracias__container h2, 
+.gracias__container p {
+    text-align: center;
+}
+
+.gracias__container h2 {
+    color: #ce190b;
+    font-weight: bold;
+}

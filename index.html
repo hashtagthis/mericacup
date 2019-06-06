@@ -5,7 +5,7 @@
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>Kindle : Home</title>
+	<title>Liderman - Copa América</title>
 	<!-- Favicon -->
 	<link rel="shortcut icon" type="image/icon" href="assets/images/favicon.ico" />
 	<!-- Font Awesome -->
@@ -16,11 +16,16 @@
 	<link href="assets/css/slick.css" rel="stylesheet">
 	<!-- Theme color -->
 	<link id="switcher" href="assets/css/theme-color/default-theme.css" rel="stylesheet">
-
 	<!-- Main Style -->
 	<link href="style.css" rel="stylesheet">
+	<!-- Estilos propios -->
+	<link href="assets/css/styles.css" rel="stylesheet">
 
-	<!-- Fonts -->
+	<!-- Facebook Opengraph integration: https://developers.facebook.com/docs/sharing/opengraph -->
+	<meta property="og:title" content="Liderman | Copa América">
+	<meta property="og:image" content="assets/images/default.jpg">
+	<meta property="og:url" content="http://www.mundoliderman.com/promocopera">
+	<meta property="og:description" content="Liderman, participa de la promo de la Copa América - Brasil 2019">
 
 	<!-- Open Sans for body font -->
 	<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,400i,600,700,800" rel="stylesheet">
@@ -55,11 +60,8 @@
 							<span class="icon-bar"></span>
 						</button>
 
-						<!-- Text Logo -->
-						<a class="navbar-brand" href="index.html"><i class="fa fa-book" aria-hidden="true"></i> Kindle</a>
-
 						<!-- Image Logo -->
-						<!-- <a class="navbar-brand" href="index.html"><img src="assets/images/logo.png"></a> -->
+						<a class="navbar-brand" href="index.html"><img src="assets/images/logo_liderman.png" alt="Logo"></a>
 
 
 					</div>
@@ -68,9 +70,9 @@
 					<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 						<ul class="nav navbar-nav mu-menu navbar-right">
 							<li><a href="#">INICIO</a></li>
-							<li><a href="#mu-book-overview">PREMIOS</a></li>
-							<li><a href="#mu-author">MECÁNICA</a></li>
-							<li><a href="#mu-pricing">REGISTRO</a></li>
+							<li><a href="#mu-book-overview">MECÁNICA</a></li>
+							<li><a href="#premios">PREMIOS</a></li>
+							<li><a href="#mu-contact">REGISTRO</a></li>
 						</ul>
 					</div><!-- /.navbar-collapse -->
 				</div><!-- /.container-fluid -->
@@ -82,25 +84,7 @@
 	<!-- Start Featured Slider -->
 
 	<section id="mu-hero">
-		<div class="container">
-			<div class="row">
-
-				<div class="col-md-6 col-sm-6 col-sm-push-6">
-					<div class="mu-hero-right">
-						<img src="assets/images/ebook.png" alt="Ebook img">
-					</div>
-				</div>
-
-				<div class="col-md-6 col-sm-6 col-sm-pull-6">
-					<div class="mu-hero-left">
-						<h1>¡Participa para la Copa América Liderman!</h1>
-						<p>Y dale U</p>
-						<a href="#" class="mu-primary-btn">Conoce más</a>
-					</div>
-				</div>
-
-			</div>
-		</div>
+		<img src="assets/images/cover_copera.jpg" alt="Cover image">
 	</section>
 
 	<!-- Start Featured Slider -->
@@ -120,41 +104,31 @@
 								<div class="row">
 
 									<!-- Start Single Counter -->
-									<div class="col-md-3 col-sm-6">
+									<div class="col-md-4 col-sm-12">
 										<div class="mu-single-counter">
-											<i class="fa fa-files-o" aria-hidden="true"></i>
-											<div class="counter-value" data-count="650">0</div>
-											<h5 class="mu-counter-name">Total Pages</h5>
+											<i class="fa fa-flag" aria-hidden="true"></i>
+											<div class="counter-value" data-count="12">0</div>
+											<h5 class="mu-counter-name">Selecciones</h5>
 										</div>
 									</div>
 									<!-- / Single Counter -->
 
 									<!-- Start Single Counter -->
-									<div class="col-md-3 col-sm-6">
+									<div class="col-md-4 col-sm-12">
 										<div class="mu-single-counter">
-											<i class="fa fa-file-text-o" aria-hidden="true"></i>
-											<div class="counter-value" data-count="422">0</div>
-											<h5 class="mu-counter-name">Chapters</h5>
+											<i class="fa fa-futbol-o" aria-hidden="true"></i>
+											<div class="counter-value" data-count="34">0</div>
+											<h5 class="mu-counter-name">Partidos</h5>
 										</div>
 									</div>
 									<!-- / Single Counter -->
 
 									<!-- Start Single Counter -->
-									<div class="col-md-3 col-sm-6">
-										<div class="mu-single-counter">
-											<i class="fa fa-users" aria-hidden="true"></i>
-											<div class="counter-value" data-count="1055">0</div>
-											<h5 class="mu-counter-name">Active Readers</h5>
-										</div>
-									</div>
-									<!-- / Single Counter -->
-
-									<!-- Start Single Counter -->
-									<div class="col-md-3 col-sm-6">
+									<div class="col-md-4 col-sm-12">
 										<div class="mu-single-counter">
 											<i class="fa fa-trophy" aria-hidden="true"></i>
-											<div class="counter-value" data-count="03">0</div>
-											<h5 class="mu-counter-name">Got Awards</h5>
+											<div class="counter-value" data-count="1">0</div>
+											<h5 class="mu-counter-name">Ganador</h5>
 										</div>
 									</div>
 									<!-- / Single Counter -->
@@ -176,118 +150,27 @@
 				<div class="row">
 					<div class="col-md-12">
 						<div class="mu-book-overview-area">
-
 							<div class="mu-heading-area">
 								<h2 class="mu-heading-title">Mecánica</h2>
 								<span class="mu-header-dot"></span>
-								<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
-									industry's standard dummy text ever</p>
+								<p>La mecánica es sencilla. Se te presentarán 5 preguntas de nuestro banco de <strong>24 preguntas</strong>
+									donde se verá tu conocimiento sobre la <strong>Copa América</strong>. Una vez terminado el cuestionario se
+									mostrarán los grupos de los equipos donde podrás colocar el marcador final, envías los resultados y ¡listo!.
+									Estarás participando del sorteo.</p>
 							</div>
-
-							<!-- Start Book Overview Content -->
-							<div class="mu-book-overview-content">
-								<div class="row">
-
-									<!-- Book Overview Single Content -->
-									<div class="col-md-3 col-sm-6">
-										<div class="mu-book-overview-single">
-											<span class="mu-book-overview-icon-box">
-												<i class="fa fa-area-chart" aria-hidden="true"></i>
-											</span>
-											<h4>Chapter One</h4>
-											<p>Lorem ipsum dolor sit amet, consect adipis elit minim veniam ettis inkeras.</p>
-										</div>
-									</div>
-									<!-- / Book Overview Single Content -->
-
-									<!-- About Us Single Content -->
-									<div class="col-md-3 col-sm-6">
-										<div class="mu-book-overview-single">
-											<span class="mu-book-overview-icon-box">
-												<i class="fa fa-cubes" aria-hidden="true"></i>
-											</span>
-											<h4>Chapter Two</h4>
-											<p>Lorem ipsum dolor sit amet, consect adipis elit minim veniam ettis inkeras.</p>
-										</div>
-									</div>
-									<!-- / Book Overview Single Content -->
-
-									<!-- About Us Single Content -->
-									<div class="col-md-3 col-sm-6">
-										<div class="mu-book-overview-single">
-											<span class="mu-book-overview-icon-box">
-												<i class="fa fa-modx" aria-hidden="true"></i>
-											</span>
-											<h4>Chapter Three</h4>
-											<p>Lorem ipsum dolor sit amet, consect adipis elit minim veniam ettis inkeras.</p>
-										</div>
-									</div>
-									<!-- / Book Overview Single Content -->
-
-									<!-- About Us Single Content -->
-									<div class="col-md-3 col-sm-6">
-										<div class="mu-book-overview-single">
-											<span class="mu-book-overview-icon-box">
-												<i class="fa fa-files-o" aria-hidden="true"></i>
-											</span>
-											<h4>Chapter Four</h4>
-											<p>Lorem ipsum dolor sit amet, consect adipis elit minim veniam ettis inkeras.</p>
-										</div>
-									</div>
-									<!-- / Book Overview Single Content -->
-
-									<!-- Book Overview Single Content -->
-									<div class="col-md-3 col-sm-6">
-										<div class="mu-book-overview-single">
-											<span class="mu-book-overview-icon-box">
-												<i class="fa fa-file-pdf-o" aria-hidden="true"></i>
-											</span>
-											<h4>Chapter Five</h4>
-											<p>Lorem ipsum dolor sit amet, consect adipis elit minim veniam ettis inkeras.</p>
-										</div>
-									</div>
-									<!-- / Book Overview Single Content -->
-
-									<!-- About Us Single Content -->
-									<div class="col-md-3 col-sm-6">
-										<div class="mu-book-overview-single">
-											<span class="mu-book-overview-icon-box">
-												<i class="fa fa-language" aria-hidden="true"></i>
-											</span>
-											<h4>Chapter Six</h4>
-											<p>Lorem ipsum dolor sit amet, consect adipis elit minim veniam ettis inkeras.</p>
-										</div>
-									</div>
-									<!-- / Book Overview Single Content -->
-
-									<!-- About Us Single Content -->
-									<div class="col-md-3 col-sm-6">
-										<div class="mu-book-overview-single">
-											<span class="mu-book-overview-icon-box">
-												<i class="fa fa-gg" aria-hidden="true"></i>
-											</span>
-											<h4>Chapter Seven</h4>
-											<p>Lorem ipsum dolor sit amet, consect adipis elit minim veniam ettis inkeras.</p>
-										</div>
-									</div>
-									<!-- / Book Overview Single Content -->
-
-									<!-- About Us Single Content -->
-									<div class="col-md-3 col-sm-6">
-										<div class="mu-book-overview-single">
-											<span class="mu-book-overview-icon-box">
-												<i class="fa fa-wpforms" aria-hidden="true"></i>
-											</span>
-											<h4>Chapter Eight</h4>
-											<p>Lorem ipsum dolor sit amet, consect adipis elit minim veniam ettis inkeras.</p>
-										</div>
-									</div>
-									<!-- / Book Overview Single Content -->
-
-								</div>
-							</div>
-							<!-- End Book Overview Content -->
-
+						</div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="pasos__container">
+						<div class="col-md-4">
+							<img src="assets/images/paso_1.png" alt="Paso 1">
+						</div>
+						<div class="col-md-4">
+							<img src="assets/images/paso_2.png" alt="Paso 2">
+						</div>
+						<div class="col-md-4">
+							<img src="assets/images/paso_3.png" alt="Paso 3">
 						</div>
 					</div>
 				</div>
@@ -295,33 +178,26 @@
 		</section>
 		<!-- End Book Overview -->
 
-		<!-- Start Video Review -->
-		<section id="mu-video-review">
+		<!-- Premios -->
+		<section id="premios">
 			<div class="container">
 				<div class="row">
 					<div class="col-md-12">
-						<div class="mu-video-review-area">
-
-							<div class="mu-heading-area">
-								<h2 class="mu-heading-title">Check Out Our Video Review</h2>
-								<span class="mu-header-dot"></span>
-								<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
-									industry's standard dummy text ever</p>
-							</div>
-
-							<!-- Start Video Review Content -->
-							<div class="mu-video-review-content">
-								<iframe class="mu-video-iframe" width="100%" height="480" src="https://www.youtube.com/embed/T4ySAlBt2Ug"
-								 frameborder="0" allowfullscreen></iframe>
-							</div>
-							<!-- End Video Review Content -->
-
-						</div>
+						<header>
+							<h2 class="mu-heading-title">Premios</h2>
+							<span class="mu-header-dot"></span>
+						</header>
+					</div>
+					<div class="col-md-4 col-md-offset-2">
+						<img src="assets/images/premio_tarjeta.png" alt="Tarjetas">
+					</div>
+					<div class="col-md-4">
+						<img src="assets/images/premio_chelas.png" alt="Chelas">
 					</div>
 				</div>
 			</div>
 		</section>
-		<!-- End Video Review -->
+		<!-- Fin premios -->
 
 		<!-- Start Contact -->
 		<section id="mu-contact">
@@ -333,43 +209,53 @@
 							<div class="mu-heading-area">
 								<h2 class="mu-heading-title">Regístrate</h2>
 								<span class="mu-header-dot"></span>
-								<p>Regístrate. Una vez creado tu perfil, podrás acceder a participar por los premios que Liderman te trae.</p>
+								<!-- <p>Regístrate. Una vez creado tu perfil, podrás acceder a participar por los premios que Liderman te trae.</p>
 								<p><strong>¿Ya te encuentras registrado?</strong> No te preocupes, solo completa los datos necesarios para
 									poder ingresar a participar.</p>
 								<p><strong>Recuerda que una vez registrado se contará solo la primera participación del día. Las demás
 										participaciones no contarán y si se detecta que algún participante intenta hacer algún tipo de trampa será
-										retirado del sorteo.</strong></p>
+										retirado del sorteo.</strong></p> -->
+								<p><strong>Regístrate aquí</strong>. Una vez realizado tu registro responde las preguntas, acierta el marcador
+									y ¡gana!. Recuerda que son varios ganadores para las <strong>tarjetas recargadas con US$30</strong> y solo
+									<strong>un ganador del frigobar</strong>.</p>
 							</div>
 
 							<!-- Start Contact Content -->
 							<div class="mu-contact-content">
-								<div id="form-messages"></div>
-								<form id="ajax-contact" method="post" action="mailer.php" class="mu-contact-form">
+								<div class="mu-contact-form">
 									<div class="form-group">
-										<input type="text" class="form-control" placeholder="Nombre" id="name" name="name" required>
+										<input type="text" class="form-control" placeholder="Nombre completo" id="nombre" required>
 									</div>
 									<div class="form-group">
-										<input type="email" class="form-control" placeholder="Correo" id="email" name="email" required>
+										<input type="email" class="form-control" placeholder="Correo" id="correo" required>
 									</div>
 									<div class="form-group">
-										<input type="text" class="form-control dniRGX" maxlength="8" placeholder="DNI" id="email" name="email"
-										 required>
+										<input type="text" class="form-control dniRGX" maxlength="8" placeholder="DNI" id="DNI">
 									</div>
-									<button type="submit" class="mu-send-msg-btn"><span>SUBMIT</span></button>
-								</form>
+									<a class="mu-send-msg-btn" id="mostrarPreguntas"><span>Registrarme</span></a>
+									<div class="preguntas__container">
+										<h1>¡Responde las preguntas!</h1>
+										<div id='quiz'>
+											<!-- Automáticamente se llenan las preguntas -->
+										</div>
+										<div class="buttons__container">
+											<div class='button_cuestionario' id='prev'><a href='#'>Anterior</a></div>
+											<div class='button_cuestionario' id='next'><a href='#'>Siguiente</a></div>
+										</div>
+										<div id="hiddenForm">
+
+										</div>
+									</div>
+								</div>
 							</div>
 							<!-- End Contact Content -->
-
 						</div>
 					</div>
 				</div>
 			</div>
 		</section>
 		<!-- End Contact -->
-
 	</main>
-
-	<!-- End main content -->
 
 
 	<!-- Start footer -->
@@ -397,8 +283,19 @@
 	<script type="text/javascript" src="assets/js/custom.js"></script>
 	<!-- Copa Script -->
 	<script type="text/javascript" src="assets/js/copa.js"></script>
-
-
+	<!-- Underscore -->
+	<script type="text/javascript" src="assets/js/underscore-min.js"></script>
+	<!-- Preguntas -->
+	<script type="text/javascript" src="assets/js/questions.js"></script>
+	<!-- Jquery Mask -->
+	<script type="text/javascript" src="assets/js/jquery.mask.min.js"></script>
+	<script>
+		$(document).ready(function () {
+			$('.score').mask("0-0", {
+				placeholder: "__-__"
+			});
+		});
+	</script>
 </body>
 
 </html>
