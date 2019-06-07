@@ -130,7 +130,7 @@
 
 .preguntas__container {
     background: url('../images/fondo_preguntas.jpg');
-    background-size: cover;
+    background-size: 100% 100%;
     position: fixed;
     top: 0;
     left: 0;
@@ -185,6 +185,7 @@
     top: 0;
     left: 0;
     cursor: pointer;
+    margin-top: 25px;
 }
 
 .preguntas__container label:hover {

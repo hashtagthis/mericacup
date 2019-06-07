@@ -202,7 +202,7 @@ var numCorrect = 0;
             id: 'question'
         });
 
-        var header = $('<h2>Pregunta ' + (index + 1) + ':</h2>');
+        var header = $('<h2>Pregunta ' + (index + 1) + '</h2>');
         qElement.append(header);
 
         var question = $('<p>').append(sampleQuestions[index].question);
