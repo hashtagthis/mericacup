@@ -143,7 +143,7 @@ var numCorrect = 0;
         choices: ["Trofeo internacional entregado por la FIFA al subcampeón de la Copa América. Se entrega desde 1994", "Trofeo internacional entregado por la CONMEBOL al subcampeón de la Copa América. Se entrega desde 1997"],
         correctAnswer: 1
     }];
-    var sampleQuestions = _.sample(questions, 5); //Preguntas random
+    var sampleQuestions = _.sample(questions, 3); //Preguntas random
     var questionCounter = 0; //Tracks question number
     var selections = []; //Array containing user choices
     var quiz = $('#quiz'); //Quiz div object
@@ -499,7 +499,7 @@ var numCorrect = 0;
             </div>
         </div>
         <div class="center-box">
-            <button class="btn enviarResultados">Guardar Resultados</button>
+            <button class="btn enviarResultados" disabled>Guardar Resultados</button>
         </div>
     </div>`)
         return score;
@@ -508,6 +508,33 @@ var numCorrect = 0;
     // Funciones
     $('body').on('click', '.enviarResultados', guardarResultados);
     $('body').on('click', '#enviar', enviarResultados);
+    $('body').on('keyup', '.score', activarBoton);
+
+    function activarBoton () {
+        A = $('#BRvsBO').val(),
+        B = $('#VEvsPE').val(),
+        C = $('#BOvsPE').val(),
+        D = $('#BRvsVE').val(),
+        E = $('#BOvsVE').val(),
+        F = $('#PEvsBR').val(),
+        G = $('#ARGvsCOL').val(),
+        H = $('#PARvsQA').val(),
+        I = $('#COLvsQA').val(),
+        J = $('#ARGvsPAR').val(),
+        K = $('#QAvsARG').val(),
+        L = $('#COLvsPAR').val(),
+        M = $('#URUvsECU').val(),
+        N = $('#JAPvsCHI').val(),
+        O = $('#URUvsJAP').val(),
+        P = $('#ECUvsCHI').val(),
+        Q = $('#ECUvsJAP').val(),
+        R = $('#CHIvsURU').val();
+        if ((A && B && C && D && E && F && G && H && I && J && K && L && M && N && O && P && Q && R).length > 0) {
+            $('.enviarResultados').prop('disabled', false);
+        } else {
+            $('.enviarResultados').prop('disabled', true);
+        }
+    }
 
     function guardarResultados() {
         var nombre = $('#nombre').val(),

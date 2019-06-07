@@ -129,7 +129,7 @@
 /* Preguntas */
 
 .preguntas__container {
-    background: url('../images/bg_prize.png');
+    background: url('../images/fondo_preguntas.jpg');
     background-size: cover;
     position: fixed;
     top: 0;
@@ -153,6 +153,7 @@
 
 .preguntas__container h1 {
     color: #ce190b;
+    font-size: 30px;
 }
 
 .preguntas__container ul {
@@ -168,6 +169,11 @@
 .preguntas__container #question p {
     font-size: 16px;
     font-weight: 600;
+    font-weight: bold;
+}
+
+.preguntas__container #question h2 {
+    font-size: 20px;
 }
 
 .preguntas__container input[type="radio"] {
@@ -179,6 +185,11 @@
     top: 0;
     left: 0;
     cursor: pointer;
+}
+
+.preguntas__container label:hover {
+    background: #8f0e059d;
+    color: white;
 }
 
 .preguntas__container input[type="radio"]:checked+label, .Checked+label {
