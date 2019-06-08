@@ -202,7 +202,7 @@ var numCorrect = 0;
             id: 'question'
         });
 
-        var header = $('<h2>Pregunta ' + (index + 1) + '</h2>');
+        var header = $('<h2>Pregunta ' + (index + 1) + '</h2>' + '<div class="subrayadoPasto"></div>');
         qElement.append(header);
 
         var question = $('<p>').append(sampleQuestions[index].question);
@@ -278,7 +278,7 @@ var numCorrect = 0;
         }
         var score = $('<div>', { id: 'question' });
         score.append(`<div class="container">
-        <h2>Acierta los resultados</h2>
+        <h4>Acierta los resultados</h4>
         <div class="table__container">
             <header>
                 <h2>Grupo A</h2>
@@ -499,7 +499,7 @@ var numCorrect = 0;
             </div>
         </div>
         <div class="center-box">
-            <button class="btn enviarResultados" disabled>Guardar Resultados</button>
+            <button class="btn enviarResultados" disabled>Enviar Resultados</button>
         </div>
     </div>`)
         return score;
@@ -509,27 +509,35 @@ var numCorrect = 0;
     $('body').on('click', '.enviarResultados', guardarResultados);
     $('body').on('click', '#enviar', enviarResultados);
     $('body').on('keyup', '.score', activarBoton);
+    $(document).on({
+        mouseenter: function () {
+            $(this).find('label').addClass('hoverItem');
+        },
+        mouseleave: function () {
+            $(this).find('label').removeClass('hoverItem');
+        }
+    }, '#question ul li');
 
-    function activarBoton () {
+    function activarBoton() {
         A = $('#BRvsBO').val(),
-        B = $('#VEvsPE').val(),
-        C = $('#BOvsPE').val(),
-        D = $('#BRvsVE').val(),
-        E = $('#BOvsVE').val(),
-        F = $('#PEvsBR').val(),
-        G = $('#ARGvsCOL').val(),
-        H = $('#PARvsQA').val(),
-        I = $('#COLvsQA').val(),
-        J = $('#ARGvsPAR').val(),
-        K = $('#QAvsARG').val(),
-        L = $('#COLvsPAR').val(),
-        M = $('#URUvsECU').val(),
-        N = $('#JAPvsCHI').val(),
-        O = $('#URUvsJAP').val(),
-        P = $('#ECUvsCHI').val(),
-        Q = $('#ECUvsJAP').val(),
-        R = $('#CHIvsURU').val();
-        if ((A && B && C && D && E && F && G && H && I && J && K && L && M && N && O && P && Q && R).length > 0) {
+            B = $('#VEvsPE').val(),
+            C = $('#BOvsPE').val(),
+            D = $('#BRvsVE').val(),
+            E = $('#BOvsVE').val(),
+            F = $('#PEvsBR').val(),
+            G = $('#ARGvsCOL').val(),
+            H = $('#PARvsQA').val(),
+            I = $('#COLvsQA').val(),
+            J = $('#ARGvsPAR').val(),
+            K = $('#QAvsARG').val(),
+            L = $('#COLvsPAR').val(),
+            M = $('#URUvsECU').val(),
+            N = $('#JAPvsCHI').val(),
+            O = $('#URUvsJAP').val(),
+            P = $('#ECUvsCHI').val(),
+            Q = $('#ECUvsJAP').val(),
+            R = $('#CHIvsURU').val();
+        if ((A && B && C && D && E && F && G && H && I && J && K && L && M && N && O && P && Q && R).length >= 3) {
             $('.enviarResultados').prop('disabled', false);
         } else {
             $('.enviarResultados').prop('disabled', true);
@@ -592,10 +600,9 @@ var numCorrect = 0;
         </div>
         </form>
         </div>
-        <h3>¡Solo falta que hagas click en el botón para enviar tus resultados y listo!</h3>
-        <p>Estarás participando por los premios que tenemos para ti.</p>
+        <h3>¡Haz click en la pelota Liderman y participa!</h3>
         <div class="center-box">
-            <a class="btn enviarResultadosFinal" id="enviar">Enviar Resultados</a>
+            <a class="btn" id="enviar"><img src="assets/images/pelota_boton.png" alt="Pelota Liderman">Participar</a>
         </div>
     <script type="text/javascript" src="https://js.createsend1.com/javascript/copypastesubscribeformlogic.js"></script>`);
     }

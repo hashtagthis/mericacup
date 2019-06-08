@@ -16,21 +16,26 @@
 /* Table container */
 
 .table__container {
-    background: #f4f9ce;
+    background: rgb(0,138,52);
+    background: linear-gradient(90deg, rgba(0,138,52,1) 0%, rgba(0,164,62,1) 100%);
     border-radius: 6px;
-    padding: 30px 20px;
     margin-bottom: 20px;
 }
 
 .table__container header {
-    margin-bottom: 25px;
+    padding: 20px 0;
+    color: white;
+    background: rgb(11,37,64);
+    background: linear-gradient(90deg, rgba(11,37,64,1) 0%, rgba(12,80,150,1) 100%);
+    border-radius: 8px 8px 0 0;
+    margin-bottom: 20px;
 }
 
 .table__container header h2 {
     font-size: 22px;
     font-weight: bold;
     text-align: center;
-    margin-top: 0;
+    margin-top: 0!important;
 }
 
 .table__container .score__content {
@@ -44,11 +49,25 @@
     height: 20px;
     width: 40px;
     text-align: center;
+    border: none;
 }
 
 .table__container .score__content img {
     width: 25px;
     height: 17px;
+}
+
+.table__container .score__content .country__label {
+    padding-bottom: 3px;
+}
+
+.table__container .score__content .country__label label {
+    padding: 0;
+    border: none;
+    cursor: auto;
+    line-height: inherit;
+    color: white;
+    font-weight: bold;
 }
 
 .table__container .score__content .country__label:first-child img {
@@ -128,6 +147,10 @@
 
 /* Preguntas */
 
+#quiz {
+    width: 60%;
+}
+
 .preguntas__container {
     background: url('../images/fondo_preguntas.jpg');
     background-size: 100% 100%;
@@ -168,12 +191,38 @@
 
 .preguntas__container #question p {
     font-size: 16px;
-    font-weight: 600;
+    margin-top: 20px;
     font-weight: bold;
 }
 
 .preguntas__container #question h2 {
     font-size: 20px;
+    margin: 0;
+    margin-top: 20px;
+}
+
+.preguntas__container #question h4 {
+    margin-top: 30px;
+    max-width: 230px;
+    margin: 30px auto 20px;
+    margin-bottom: 20px;
+    background: #009c3b;
+    padding: 10px 5px;
+    border-radius: 5px;
+    color: white;
+}
+
+.preguntas__container #question .subrayadoPasto {
+    background-image: url(../images/titulo_sub.png);
+    width: 110px;
+    height: 18px;
+    margin: -13px auto 0;
+}
+
+#question label.hoverItem {
+    background: #ff3728;
+    color: white;
+    font-weight: bold;
 }
 
 .preguntas__container input[type="radio"] {
@@ -185,17 +234,13 @@
     top: 0;
     left: 0;
     cursor: pointer;
-    margin-top: 25px;
-}
-
-.preguntas__container label:hover {
-    background: #8f0e059d;
-    color: white;
 }
 
 .preguntas__container input[type="radio"]:checked+label, .Checked+label {
     background: #ce190b;
     color: white;
+    border-color: #ce190b;
+    font-weight: bold;
 }
 
 .buttons__container .button_cuestionario a {
@@ -205,13 +250,15 @@
 }
 
 .preguntas__container label {
-    padding: 5px;
+    padding: 5px 10px;
     border: 1px solid black;
+    font-weight: normal;
     color: black;
     cursor: pointer;
     line-height: initial;
     z-index: 90;
     font-size: 15px;
+    border-radius: 5px;
 }
 
 .buttons__container {
@@ -232,6 +279,7 @@
     border: 2px solid #ce190b;
     background: #ce190b;
     cursor: pointer;
+    border-radius: 6px;
 }
 
 /* Formulario escondido */
@@ -283,5 +331,23 @@
 
 .gracias__container h2 {
     color: #ce190b;
+    font-weight: bold;
+}
+
+#enviar {
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items: center;
+    color: #ce190b;
+    transition: all ease-in-out 0.6s;
+    box-shadow: none;
+}
+
+#enviar img {
+    width: 60px;
+}
+
+#enviar:hover {
     font-weight: bold;
 }
