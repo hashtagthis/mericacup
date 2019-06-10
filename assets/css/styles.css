@@ -16,8 +16,8 @@
 /* Table container */
 
 .table__container {
-    background: rgb(0,138,52);
-    background: linear-gradient(90deg, rgba(0,138,52,1) 0%, rgba(0,164,62,1) 100%);
+    background: rgb(0, 138, 52);
+    background: linear-gradient(90deg, rgba(0, 138, 52, 1) 0%, rgba(0, 164, 62, 1) 100%);
     border-radius: 6px;
     margin-bottom: 20px;
 }
@@ -25,8 +25,8 @@
 .table__container header {
     padding: 20px 0;
     color: white;
-    background: rgb(11,37,64);
-    background: linear-gradient(90deg, rgba(11,37,64,1) 0%, rgba(12,80,150,1) 100%);
+    background: rgb(11, 37, 64);
+    background: linear-gradient(90deg, rgba(11, 37, 64, 1) 0%, rgba(12, 80, 150, 1) 100%);
     border-radius: 8px 8px 0 0;
     margin-bottom: 20px;
 }
@@ -35,7 +35,7 @@
     font-size: 22px;
     font-weight: bold;
     text-align: center;
-    margin-top: 0!important;
+    margin-top: 0 !important;
 }
 
 .table__container .score__content {
@@ -82,7 +82,8 @@
     text-align: center;
 }
 
-.enviarResultados, .enviarResultadosFinal {
+.enviarResultados,
+.enviarResultadosFinal {
     background: red;
     color: white;
     font-weight: bold;
@@ -91,7 +92,8 @@
     display: inline-block;
 }
 
-.enviarResultados:hover, .enviarResultadosFinal:hover {
+.enviarResultados:hover,
+.enviarResultadosFinal:hover {
     color: white;
 }
 
@@ -174,6 +176,10 @@
     visibility: visible;
 }
 
+.preguntas__container.active.newBG {
+    background: url('../images/bg_prize.png');
+}
+
 .preguntas__container h1 {
     color: #ce190b;
     font-size: 30px;
@@ -195,10 +201,20 @@
     font-weight: bold;
 }
 
+.fondoTitulo {
+    position: relative;
+    margin-top: -50px;
+    margin-left: -34px;
+    z-index: -1;
+}
+
 .preguntas__container #question h2 {
     font-size: 20px;
     margin: 0;
-    margin-top: 20px;
+    margin-top: 50px;
+    letter-spacing: 1px;
+    color: white;
+    text-shadow: 0px 3px 2px #000000;
 }
 
 .preguntas__container #question h4 {
@@ -236,7 +252,8 @@
     cursor: pointer;
 }
 
-.preguntas__container input[type="radio"]:checked+label, .Checked+label {
+.preguntas__container input[type="radio"]:checked+label,
+.Checked+label {
     background: #ce190b;
     color: white;
     border-color: #ce190b;
@@ -307,6 +324,12 @@
     .table__container .score__content {
         width: 100%;
     }
+    #quiz {
+        width: 100%;
+    }
+    #logoCopa {
+        display: none;
+    }
 }
 
 #gracias header {
@@ -324,7 +347,7 @@
     padding: 120px 0 0;
 }
 
-.gracias__container h2, 
+.gracias__container h2,
 .gracias__container p {
     text-align: center;
 }

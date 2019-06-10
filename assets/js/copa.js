@@ -17,6 +17,9 @@
                 $('body').on('keyup', '.dniRGX', me.Eventos.RegexDNI);
             },
             InicializarProcesosOnLoad: function () {
+                if ($(window).innerWidth() <= 750) {
+                    $('.preguntas__container').css('background', 'url("assets/images/fondo_preguntas_sinlogo.jpg")');
+                }
             }
         }
         me.Inicializar = function () {

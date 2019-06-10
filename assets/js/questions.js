@@ -47,7 +47,7 @@ var numCorrect = 0;
         choices: ["En 1942 Uruguay llegó invicto a la final además de ganarla por 8 goles arriba", "En 2001 Colombia ganó los seis partidos que jugó, con 11 goles a favor y la valla invicta", "En 1956 Paraguay dio que hablar en el campeonato", "En 1935 Brasil fue el mayor ganador del torneo por diferencia de goles"],
         correctAnswer: 1
     }, {
-        question: "¿Cuántos y cuáles son los jugadores que han ganado el triplete sudamericano? (Copa Mundial, Copa América y Libertadores)",
+        question: "¿Cuántos y cuáles son los jugadores que han ganado el triplete sudamericano? (Mundial, C. América y Libertadores)",
         choices: ["4 jugadores - Ruggeri (Argentina), Marcos Silveira (Brasil), Cafú (Brasil) y Mauro Ramos (Brasil)", "3 jugadores - Ronaldo N. (Brasil), Batistuta (Argentina), Maradona (Argentina)", "2 jugadores - Pelé (Brasil) y Di Estefano (Argentina)", "1 jugador - Chilavert (Paraguay)"],
         correctAnswer: 0
     }, {
@@ -201,8 +201,7 @@ var numCorrect = 0;
         var qElement = $('<div>', {
             id: 'question'
         });
-
-        var header = $('<h2>Pregunta ' + (index + 1) + '</h2>' + '<div class="subrayadoPasto"></div>');
+        var header = $('<img src="assets/images/logo_copa.png" alt="Logo Copa América" id="logoCopa"><h2>Pregunta ' + (index + 1) + '</h2>' + '<img src="assets/images/titulo_sub.png" alt="Fondo Pasto" class="fondoTitulo">');
         qElement.append(header);
 
         var question = $('<p>').append(sampleQuestions[index].question);
@@ -267,7 +266,9 @@ var numCorrect = 0;
     // Computes score and returns a paragraph element to be displayed
     function displayScore() {
         $('.preguntas__container h1').fadeOut();
-        $('#quiz').css('overflow-y', 'scroll').css('width', '100%');
+        $('#quiz').css('width', '100%');
+        $('#quiz').css('overflow-y', 'scroll');
+        $('.preguntas__container').addClass('newBG');
         for (var i = 0; i < selections.length; i++) {
             if (selections[i] === sampleQuestions[i].correctAnswer) {
                 numCorrect++;
@@ -519,7 +520,7 @@ var numCorrect = 0;
     }, '#question ul li');
 
     function activarBoton() {
-        A = $('#BRvsBO').val(),
+        var A = $('#BRvsBO').val(),
             B = $('#VEvsPE').val(),
             C = $('#BOvsPE').val(),
             D = $('#BRvsVE').val(),
