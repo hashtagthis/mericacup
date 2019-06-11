@@ -1,10 +1,11 @@
 $(document).ready(function () {
     $("#mostrarPreguntas").click(function () {
-        if ($('#nombre, #correo, #DNI').val().length > 0) {
+        if (($('#nombre, #correo, #DNI').val().length > 0) && ($('#paises').val() !== "0")) {
             $('.preguntas__container').addClass('active');
             $('header').css('display', 'none');
             $('html').css('overflow-y', 'hidden');
         }
+        $('#paises').val() !== "0" ? $(this).css('border','1px solid red') : $(this).css('border','none');
     });
 });
 
@@ -549,6 +550,7 @@ var numCorrect = 0;
         var nombre = $('#nombre').val(),
             correo = $('#correo').val(),
             dni = $('#DNI').val(),
+            pais = $('#paises').val(),
             respuestaCorrecta = numCorrect,
             BRvsBO = $('#BRvsBO').val(),
             VEvsPE = $('#VEvsPE').val(),
@@ -577,6 +579,7 @@ var numCorrect = 0;
         <input id="fieldEmail" name="cm-ydlyiii-ydlyiii" type="email" class="js-cm-email-input"
         required value="`+ correo + `"/>
         <input id="fieldwvjhk" name="cm-f-wvjhk" type="text" value="`+ dni + `"/>
+        <input id="fieldwtuuyy" name="cm-f-wtuuyy" type="text" value="` + pais + `"/>
         <input id="fieldwvijk" name="cm-f-wvijk" type="text" value="`+ respuestaCorrecta + `"/>
         <input id="fieldwjitld" name="cm-f-wjitld" type="text" value="`+ BRvsBO + `"/>
         <input id="fieldwjitlh" name="cm-f-wjitlh" type="text" value="`+ VEvsPE + `"/>
