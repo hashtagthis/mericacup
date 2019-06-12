@@ -44,7 +44,7 @@ var numCorrect = 0;
         choices: ["Diego Forlan ganó la Copa América en el 2011 mientras que su padre la ganó en 1967. Su abuelo Juan Carlos Corrazo también levantó el trofeo en 1959 como entrenador", "Ronaldinho ganó en el 2004, su padre lo ganó en el 1959 y su abuelo en 1922", "Messi ganó en el 2004. Su padre ganó la copa en el 1959 y su abuelo en el 1937", "Mentira, ninguno hizo eso"],
         correctAnswer: 0
     }, {
-        question: "¿Quién tiene la mejor campaña de un equipo campeón en la historia de la Copa América y en cuál año? ",
+        question: "¿Quién tiene la mejor campaña de un equipo campeón en la historia de la Copa América y en cuál año?",
         choices: ["En 1942 Uruguay llegó invicto a la final además de ganarla por 8 goles arriba", "En 2001 Colombia ganó los seis partidos que jugó, con 11 goles a favor y la valla invicta", "En 1956 Paraguay dio que hablar en el campeonato", "En 1935 Brasil fue el mayor ganador del torneo por diferencia de goles"],
         correctAnswer: 1
     }, {
@@ -81,7 +81,7 @@ var numCorrect = 0;
         correctAnswer: 0
     }, {
         question: "Ante la falta de árbitros ¿Cuáles fueron los personajes que se vistieron de negro y dirigieron un par de partidos y en cuáles Copas América?",
-        choices: ["El técnico brasilero Carlos Alberto Parreira (1993 y 1996) y el jugador uruguayo Nelson Cabrera (1994) ", "El técnico chileno Carlos Fanta (1916 y 1920) y el jugador brasileño Sidney Pullen (1916)"],
+        choices: ["El técnico brasilero Carlos Alberto Parreira (1993 y 1996) y el jugador uruguayo Nelson Cabrera (1994)", "El técnico chileno Carlos Fanta (1916 y 1920) y el jugador brasileño Sidney Pullen (1916)"],
         correctAnswer: 1
     }, {
         question: "¿Cuáles son las selecciones que salieron campeonas con un técnico de otra nacionalidad y en cuáles Copas América?",
@@ -89,11 +89,11 @@ var numCorrect = 0;
         correctAnswer: 0
     }, {
         question: "¿Cuáles son los dos jugadores con más Copa América jugadas, cuántas y sus nacionalidades?",
-        choices: ["El ecuatoriano Álex Aguinaga y el uruguayo Ángel Romano tienen el récord de participaciones en la Copa América, con ocho ediciones cada uno.", "El brasilero Rubén Da Silva y el paraguayo Walter Pelleti tienen el récord de mayores goles en la Copa América, con 3 ediciones cada uno"],
+        choices: ["El ecuatoriano Álex Aguinaga y el uruguayo Ángel Romano", "El brasilero Rubén Da Silva y el paraguayo Walter Pelleti"],
         correctAnswer: 0
     }, {
         question: "Desde 1990 ¿Cuáles jugadores han sido máximo goleador de la Copa América dos veces y en cuáles ediciones?",
-        choices: ["Giovanni Hernández (2001 y 2006), Víctor Aristizabal (1997 y 2001)", "Gabriel Omar Batistuta (1991 y 1995), Paolo Guerrero (2011 y 2015) y Eduardo Vargas (2015 y 2016)", "Denilson (1997 y 1993), Jared Borgetti (2001 y 1993)"],
+        choices: ["Giovanni Hernández (2001 y 2006), Víctor Aristizabal (1997 y 2001)", "Gabriel Omar Batistuta (1991 y 1995), Paolo Guerrero (2011 y 2015) y Eduardo Vargas (2015 y 2016)", "Denilson (1993 y 1997), Jared Borgetti (1993 y 2001)"],
         correctAnswer: 1
     }, {
         question: "En la primera Copa América, Argentina no tenía 11 jugadores para iniciar el partido. ¿De dónde llamaron a ese jugar y qué hizo en el partido?",
@@ -129,7 +129,7 @@ var numCorrect = 0;
         correctAnswer: 1
     }, {
         question: "¿En qué años se realizaron las 3 ediciones de la Copa América que no tuvieron sede fija?",
-        choices: ["1975, 1979 y 1983", "1990, 1994, 1916", "1980, 1986, 1990"],
+        choices: ["1975, 1979 y 1983", "1916, 1990, 1994", "1980, 1986, 1990"],
         correctAnswer: 0
     }, {
         question: "¿Quién, de cuál selección y en cuál Copa América marcó el gol número 2,000 en la historia de la competencia?",
