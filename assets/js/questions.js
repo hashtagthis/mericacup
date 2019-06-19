@@ -5,7 +5,7 @@ $(document).ready(function () {
             $('header').css('display', 'none');
             $('html').css('overflow-y', 'hidden');
         }
-        $('#paises').val() !== "0" ? $(this).css('border','1px solid red') : $(this).css('border','none');
+        $('#paises').val() !== "0" ? $(this).css('border', '1px solid red') : $(this).css('border', 'none');
     });
 });
 
@@ -266,6 +266,13 @@ var numCorrect = 0;
 
     // Computes score and returns a paragraph element to be displayed
     function displayScore() {
+        // Variables
+        var nombre = $('#nombre').val(),
+        correo = $('#correo').val(),
+        dni = $('#DNI').val(),
+        pais = $('#paises').val(),
+        respuestaCorrecta = numCorrect;
+        // Estilos
         $('.preguntas__container h1').fadeOut();
         $('#quiz').css('width', '100%');
         $('#quiz').css('overflow-y', 'scroll');
@@ -279,301 +286,7 @@ var numCorrect = 0;
             numCorrect = '';
         }
         var score = $('<div>', { id: 'question' });
-        score.append(`<div class="container">
-        <h4>Acierta los resultados</h4>
-        <div class="table__container">
-            <header>
-                <h2>Grupo A</h2>
-            </header>
-            <div class="flexRow__container">
-                <div class="flexRow__container score__content">
-                    <div class="country__label">
-                        <label for="">Brasil</label>
-                        <img src="assets/images/flags/BR.png" alt="Brasil">
-                    </div>
-                    <input type="text" class="score" id="BRvsBO">
-                    <div class="country__label">
-                        <img src="assets/images/flags/BO.png" alt="Bolivia">
-                        <label for="">Bolivia</label>
-                    </div>
-                </div>
-                <div class="flexRow__container score__content">
-                    <div class="country__label">
-                        <label for="">Venezuela</label>
-                        <img src="assets/images/flags/VE.png" alt="Venezuela">
-                    </div>
-                    <input type="text" class="score" id="VEvsPE">
-                    <div class="country__label">
-                        <img src="assets/images/flags/PE.png" alt="Perú">
-                        <label for="">Perú</label>
-                    </div>
-                </div>
-                <div class="flexRow__container score__content">
-                    <div class="country__label">
-                        <label for="">Bolivia</label>
-                        <img src="assets/images/flags/BO.png" alt="Bolivia">
-                    </div>
-                    <input type="text" class="score" id="BOvsPE">
-                    <div class="country__label">
-                        <img src="assets/images/flags/PE.png" alt="Perú">
-                        <label for="">Perú</label>
-                    </div>
-                </div>
-                <div class="flexRow__container score__content">
-                    <div class="country__label">
-                        <label for="">Brasil</label>
-                        <img src="assets/images/flags/BR.png" alt="Brasil">
-                    </div>
-                    <input type="text" class="score" id="BRvsVE">
-                    <div class="country__label">
-                        <img src="assets/images/flags/VE.png" alt="Venezuela">
-                        <label for="">Venezuela</label>
-                    </div>
-                </div>
-                <div class="flexRow__container score__content">
-                    <div class="country__label">
-                        <label for="">Bolivia</label>
-                        <img src="assets/images/flags/BO.png" alt="Bolivia">
-                    </div>
-                    <input type="text" class="score" id="BOvsVE">
-                    <div class="country__label">
-                        <img src="assets/images/flags/VE.png" alt="Venezuela">
-                        <label for="">Venezuela</label>
-                    </div>
-                </div>
-                <div class="flexRow__container score__content">
-                    <div class="country__label">
-                        <label for="">Perú</label>
-                        <img src="assets/images/flags/PE.png" alt="Perú">
-                    </div>
-                    <input type="text" class="score" id="PEvsBR">
-                    <div class="country__label">
-                        <img src="assets/images/flags/BR.png" alt="Brasil">
-                        <label for="">Brasil</label>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="table__container">
-            <header>
-                <h2>Grupo B</h2>
-            </header>
-            <div class="flexRow__container">
-                <div class="flexRow__container score__content">
-                    <div class="country__label">
-                        <label for="">Argentina</label>
-                        <img src="assets/images/flags/AR.png" alt="Argentina">
-                    </div>
-                    <input type="text" class="score" id="ARGvsCOL">
-                    <div class="country__label">
-                        <img src="assets/images/flags/CO.png" alt="Colombia">
-                        <label for="">Colombia</label>
-                    </div>
-                </div>
-                <div class="flexRow__container score__content">
-                    <div class="country__label">
-                        <label for="">Paraguay</label>
-                        <img src="assets/images/flags/PA.png" alt="Paraguay">
-                    </div>
-                    <input type="text" class="score" id="PARvsQA">
-                    <div class="country__label">
-                        <img src="assets/images/flags/QA.png" alt="Qatar">
-                        <label for="">Qatar</label>
-                    </div>
-                </div>
-                <div class="flexRow__container score__content">
-                    <div class="country__label">
-                        <label for="">Colombia</label>
-                        <img src="assets/images/flags/CO.png" alt="Colombia">
-                    </div>
-                    <input type="text" class="score" id="COLvsQA">
-                    <div class="country__label">
-                        <img src="assets/images/flags/QA.png" alt="Qatar">
-                        <label for="">Qatar</label>
-                    </div>
-                </div>
-                <div class="flexRow__container score__content">
-                    <div class="country__label">
-                        <label for="">Argentina</label>
-                        <img src="assets/images/flags/AR.png" alt="Argentina">
-                    </div>
-                    <input type="text" class="score" id="ARGvsPAR">
-                    <div class="country__label">
-                        <img src="assets/images/flags/PA.png" alt="Paraguay">
-                        <label for="">Paraguay</label>
-                    </div>
-                </div>
-                <div class="flexRow__container score__content">
-                    <div class="country__label">
-                        <label for="">Qatar</label>
-                        <img src="assets/images/flags/QA.png" alt="Qatar">
-                    </div>
-                    <input type="text" class="score" id="QAvsARG">
-                    <div class="country__label">
-                        <img src="assets/images/flags/AR.png" alt="Argentina">
-                        <label for="">Argentina</label>
-                    </div>
-                </div>
-                <div class="flexRow__container score__content">
-                    <div class="country__label">
-                        <label for="">Colombia</label>
-                        <img src="assets/images/flags/CO.png" alt="Colombia">
-                    </div>
-                    <input type="text" class="score" id="COLvsPAR">
-                    <div class="country__label">
-                        <img src="assets/images/flags/PA.png" alt="Paraguay">
-                        <label for="">Paraguay</label>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="table__container">
-            <header>
-                <h2>Grupo C</h2>
-            </header>
-            <div class="flexRow__container">
-                <div class="flexRow__container score__content">
-                    <div class="country__label">
-                        <label for="">Uruguay</label>
-                        <img src="assets/images/flags/UR.png" alt="Uruguay">
-                    </div>
-                    <input type="text" class="score" id="URUvsECU">
-                    <div class="country__label">
-                        <img src="assets/images/flags/EC.png" alt="Ecuador">
-                        <label for="">Ecuador</label>
-                    </div>
-                </div>
-                <div class="flexRow__container score__content">
-                    <div class="country__label">
-                        <label for="">Japón</label>
-                        <img src="assets/images/flags/JAP.png" alt="Japón">
-                    </div>
-                    <input type="text" class="score" id="JAPvsCHI">
-                    <div class="country__label">
-                        <img src="assets/images/flags/CL.png" alt="Chile">
-                        <label for="">Chile</label>
-                    </div>
-                </div>
-                <div class="flexRow__container score__content">
-                    <div class="country__label">
-                        <label for="">Uruguay</label>
-                        <img src="assets/images/flags/UR.png" alt="Uruguay">
-                    </div>
-                    <input type="text" class="score" id="URUvsJAP">
-                    <div class="country__label">
-                        <img src="assets/images/flags/JAP.png" alt="Japón">
-                        <label for="">Japón</label>
-                    </div>
-                </div>
-                <div class="flexRow__container score__content">
-                    <div class="country__label">
-                        <label for="">Ecuador</label>
-                        <img src="assets/images/flags/EC.png" alt="Ecuador">
-                    </div>
-                    <input type="text" class="score" id="ECUvsCHI">
-                    <div class="country__label">
-                        <img src="assets/images/flags/CL.png" alt="Chile">
-                        <label for="">Chile</label>
-                    </div>
-                </div>
-                <div class="flexRow__container score__content">
-                    <div class="country__label">
-                        <label for="">Ecuador</label>
-                        <img src="assets/images/flags/EC.png" alt="Ecuador">
-                    </div>
-                    <input type="text" class="score" id="ECUvsJAP">
-                    <div class="country__label">
-                        <img src="assets/images/flags/JAP.png" alt="Japón">
-                        <label for="">Japón</label>
-                    </div>
-                </div>
-                <div class="flexRow__container score__content">
-                    <div class="country__label">
-                        <label for="">Chile</label>
-                        <img src="assets/images/flags/CL.png" alt="Chile">
-                    </div>
-                    <input type="text" class="score" id="CHIvsURU">
-                    <div class="country__label">
-                        <img src="assets/images/flags/UR.png" alt="Uruguay">
-                        <label for="">Uruguay</label>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="center-box">
-            <button class="btn enviarResultados" disabled>Enviar Resultados</button>
-        </div>
-    </div>`)
-        return score;
-    }
-
-    // Funciones
-    $('body').on('click', '.enviarResultados', guardarResultados);
-    $('body').on('click', '#enviar', enviarResultados);
-    $('body').on('keyup', '.score', activarBoton);
-    $(document).on({
-        mouseenter: function () {
-            $(this).find('label').addClass('hoverItem');
-        },
-        mouseleave: function () {
-            $(this).find('label').removeClass('hoverItem');
-        }
-    }, '#question ul li');
-
-    function activarBoton() {
-        var A = $('#BRvsBO').val(),
-            B = $('#VEvsPE').val(),
-            C = $('#BOvsPE').val(),
-            D = $('#BRvsVE').val(),
-            E = $('#BOvsVE').val(),
-            F = $('#PEvsBR').val(),
-            G = $('#ARGvsCOL').val(),
-            H = $('#PARvsQA').val(),
-            I = $('#COLvsQA').val(),
-            J = $('#ARGvsPAR').val(),
-            K = $('#QAvsARG').val(),
-            L = $('#COLvsPAR').val(),
-            M = $('#URUvsECU').val(),
-            N = $('#JAPvsCHI').val(),
-            O = $('#URUvsJAP').val(),
-            P = $('#ECUvsCHI').val(),
-            Q = $('#ECUvsJAP').val(),
-            R = $('#CHIvsURU').val();
-        if ((A && B && C && D && E && F && G && H && I && J && K && L && M && N && O && P && Q && R).length >= 3) {
-            $('.enviarResultados').prop('disabled', false);
-        } else {
-            $('.enviarResultados').prop('disabled', true);
-        }
-    }
-
-    function guardarResultados() {
-        var nombre = $('#nombre').val(),
-            correo = $('#correo').val(),
-            dni = $('#DNI').val(),
-            pais = $('#paises').val(),
-            respuestaCorrecta = numCorrect,
-            BRvsBO = $('#BRvsBO').val(),
-            VEvsPE = $('#VEvsPE').val(),
-            BOvsPE = $('#BOvsPE').val(),
-            BRvsVE = $('#BRvsVE').val(),
-            BOvsVE = $('#BOvsVE').val(),
-            PEvsBR = $('#PEvsBR').val(),
-            ARGvsCOL = $('#ARGvsCOL').val(),
-            PARvsQA = $('#PARvsQA').val(),
-            COLvsQA = $('#COLvsQA').val(),
-            ARGvsPAR = $('#ARGvsPAR').val(),
-            QAvsARG = $('#QAvsARG').val(),
-            COLvsPAR = $('#COLvsPAR').val(),
-            URUvsECU = $('#URUvsECU').val(),
-            JAPvsCHI = $('#JAPvsCHI').val(),
-            URUvsJAP = $('#URUvsJAP').val(),
-            ECUvsCHI = $('#ECUvsCHI').val(),
-            ECUvsJAP = $('#ECUvsJAP').val(),
-            CHIvsURU = $('#CHIvsURU').val();
-        // Añadir formulario
-        var formulario = $('#hiddenForm');
-        $('#question .container').fadeOut(300);
-        formulario.append(`<div class="hiddenForm">
+        score.append(`<div class="hiddenForm">
         <form id="subForm" class="js-cm-form" action="https://www.createsend.com/t/subscribeerror?description=" method="post" data-id="92D4C54F0FEC16E5ADC2B1904DE9ED1AF626D99C1F785A74C61FC3136726BEAF6F9F85F771F0BB790F44EE83B30036C850A7F4A3DF13E5136ABA6ABEE3DC33B1">	
         <input id="fieldName" name="cm-name" type="text" value="`+ nombre + `"/>
         <input id="fieldEmail" name="cm-ydlyiii-ydlyiii" type="email" class="js-cm-email-input"
@@ -581,24 +294,6 @@ var numCorrect = 0;
         <input id="fieldwvjhk" name="cm-f-wvjhk" type="text" value="`+ dni + `"/>
         <input id="fieldwtuuyy" name="cm-f-wtuuyy" type="text" value="` + pais + `"/>
         <input id="fieldwvijk" name="cm-f-wvijk" type="text" value="`+ respuestaCorrecta + `"/>
-        <input id="fieldwjitld" name="cm-f-wjitld" type="text" value="`+ BRvsBO + `"/>
-        <input id="fieldwjitlh" name="cm-f-wjitlh" type="text" value="`+ VEvsPE + `"/>
-        <input id="fieldwjitlk" name="cm-f-wjitlk" type="text" value="`+ BOvsPE + `"/>
-        <input id="fieldwjitlu" name="cm-f-wjitlu" type="text" value="`+ BRvsVE + `"/>
-        <input id="fieldwjitrl" name="cm-f-wjitrl" type="text" value="`+ BOvsVE + `"/>
-        <input id="fieldwjitrr" name="cm-f-wjitrr" type="text" value="`+ PEvsBR + `"/>
-        <input id="fieldwjitry" name="cm-f-wjitry" type="text" value="`+ ARGvsCOL + `"/>
-        <input id="fieldwjitrj" name="cm-f-wjitrj" type="text" value="`+ PARvsQA + `"/>
-        <input id="fieldwjitrt" name="cm-f-wjitrt" type="text" value="`+ COLvsQA + `"/>
-        <input id="fieldwjityy" name="cm-f-wjityy" type="text" value="`+ ARGvsPAR + `"/>
-        <input id="fieldwjityj" name="cm-f-wjityj" type="text" value="`+ QAvsARG + `"/>
-        <input id="fieldwjityt" name="cm-f-wjityt" type="text" value="`+ COLvsPAR + `"/>
-        <input id="fieldwjityi" name="cm-f-wjityi" type="text" value="`+ URUvsECU + `"/>
-        <input id="fieldwjityd" name="cm-f-wjityd" type="text" value="`+ JAPvsCHI + `"/>
-        <input id="fieldwjitjy" name="cm-f-wjitjy" type="text" value="`+ URUvsJAP + `"/>
-        <input id="fieldwjitjj" name="cm-f-wjitjj" type="text" value="`+ ECUvsCHI + `"/>
-        <input id="fieldwjitjt" name="cm-f-wjitjt" type="text" value="`+ ECUvsJAP + `"/>
-        <input id="fieldwjitji" name="cm-f-wjitji" type="text" value="`+ CHIvsURU + `"/>
         <div class="center-box">
             <button class="btn js-cm-submit-button enviarABD" type="submit">Enviar Resultados</button>
         </div>
@@ -608,7 +303,26 @@ var numCorrect = 0;
         <div class="center-box">
             <a class="btn" id="enviar"><img src="assets/images/pelota_boton.png" alt="Pelota Liderman">Participar</a>
         </div>
-    <script type="text/javascript" src="https://js.createsend1.com/javascript/copypastesubscribeformlogic.js"></script>`);
+        <script type="text/javascript" src="https://js.createsend1.com/javascript/copypastesubscribeformlogic.js"></script>`)
+        return score;
+    }
+
+    // Funciones
+    $('body').on('click', '.enviarResultados', guardarResultados);
+    $('body').on('click', '#enviar', enviarResultados);
+    $(document).on({
+        mouseenter: function () {
+            $(this).find('label').addClass('hoverItem');
+        },
+        mouseleave: function () {
+            $(this).find('label').removeClass('hoverItem');
+        }
+    }, '#question ul li');
+
+    function guardarResultados() {
+        var formulario = $('#hiddenForm');
+        $('#question .container').fadeOut(300);
+        formulario.append(``);
     }
 
     function enviarResultados() {
